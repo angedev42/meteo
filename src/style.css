@@ -24,7 +24,8 @@
     display: grid;
     position: absolute;
     top: 50%;
-    left: 20%;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: #000000a1;
     padding: 0px 20px 20px 20px;           /* marges internes haut/bas et gauche/droite */
     border-radius: 10px;         /* coins arrondis, optionnel */
