@@ -1,48 +1,80 @@
 /* menu */
 
-header {
-  background-color: #000000;
-  padding: 20px 40px;
-  margin: 0 0 0 0;
-  color: white;
-}
-
-.navbar {
+/* L'en-tête avec l'image de fond */
+#header {
+  position: relative;
   width: 100%;
+}
+
+/* Image de fond */
+.background-image {
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+  background-size: cover;
+  background-position: center;
+}
+
+#entete {
+  width: 100%;
+  height: 100%; 
+  object-fit: cover;
+}
+
+/* Conteneur du logo */
+.logo-container {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  z-index: 20; 
+}
+
+/* Logo */
+.logo {
+  max-width: 300px; /* Ajuster la taille du logo */
+  max-height: 200px;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(0, 0, 0); 
+  padding: 10px 0;
+  z-index: 10; 
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
 }
 
-.logo img {
-  height: 100px;
-}
-
-.navbar .nav-links {
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 20px;
-  font-style: normal;
-  list-style: none;
+.nav-links {
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
 
-.navbar .nav-links a {
+.nav-links a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 18px;
+  transition: all 0.3s ease;
 }
 
-.navbar .nav-links a:hover {
-  font: 1.5em;
+.nav-links a:hover {
   color: rgb(251, 241, 219);
+  font-size: 1.1em; /* Effet au survol */
 }
 
 /* général */
 body {
   margin: 0;
   padding: 0;
+  padding-top: 60px; 
   font-family: 'Segoe UI', sans-serif;
 }
 
@@ -57,6 +89,10 @@ h2{
     color:#000000;
     font-family: "Nunito Sans", sans-serif;
     font-size: 50px;
+}
+
+#zone-agenda{
+    background-color: #bb9547;
 }
 
 /* formulaire */
