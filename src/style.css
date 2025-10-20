@@ -1,24 +1,36 @@
-/* menu */
-
-/* L'en-tête avec l'image de fond */
+/* En-tête plein écran */
 #header {
-  position: relative;
   width: 100%;
+  height: 100vh;
 }
 
-/* Image de fond */
+/* Fond d'image via CSS */
 .background-image {
-  position: relative;
   width: 100%;
-  height: 100vh; 
+  height: 100%;
+  background-image: url('https://puydufou.com/france/files/s3fs-public/styles/home_main_image_desktop/public/homepage/main-image/visuel_header_gladiateur-2.jpg.webp?VersionId=3oV872PgT6TdEphBO5nMcNZVd21iS_3z&itok=5SnTTiVO');
   background-size: cover;
   background-position: center;
+  position: relative;
 }
 
-#entete {
-  width: 100%;
-  height: 100%; 
-  object-fit: cover;
+/* Contenu superposé */
+.overlay-content {
+  text-align: left;
+  color: white;
+}
+
+.overlay-main{
+    display: grid;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    background-color: #000000a1;
+    padding: 0px 20px 20px 20px;           /* marges internes haut/bas et gauche/droite */
+    border-radius: 10px;         /* coins arrondis, optionnel */
+    width: max-content;          /* s’adapte au contenu, mais garde une largeur propre */
+    max-width: 90%;              /* limite sur grands écrans */
+    box-sizing: border-box;  
 }
 
 /* Conteneur du logo */
@@ -35,6 +47,26 @@
 .logo {
   max-width: 300px; /* Ajuster la taille du logo */
   max-height: 200px;
+}
+
+/* Boutons */
+.menu {
+    place-self: center;
+}
+
+.menu button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #000;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.menu button:hover {
+  background-color: rgba(255, 255, 255, 1);
 }
 
 /* Navbar */
@@ -83,6 +115,21 @@ main{
   margin: 0 auto;        
   padding: 20px;        
   box-sizing: border-box; 
+}
+
+.zone {
+  height: 90vh;        /* 90% de la hauteur de la fenêtre */
+  box-sizing: border-box;
+}
+
+/* Titre */
+h1 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 70px;
+  margin-bottom: 20px;
+  color:rgb(251, 241, 219);
+  z-index: 30;
+  place-self: center;
 }
 
 h2{
