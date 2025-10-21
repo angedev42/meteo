@@ -32,18 +32,54 @@
             <h2>Météo des Epesses</h2>
             <p>Météo des 7 jours à venir </p>
             <section id="meteo"></section>
-        </div>  
-
-        <div id="zone-agenda" class="zone">
-            <h2>Agenda</h2>
-            <p>Les évènements de la semaine...</p>
-            <section id="agenda"></section>
+            <a href="#"><button>Voir plus de détails</button></a>
+        </div>
+        
+        <div id="zone-agenda">
+            <div class="inner">
+                <h2>Agenda</h2>
+                <div id="event-contener">
+                    <div class="card">
+                        <img src="https://www.lesherbiers.fr/media/mille-choeurs-pour-un-regard-10.jpg" class="card-img-top" alt="identité visuelle">
+                        <div class="card-body">
+                            <h5 class="card-title">Concert des trois chorales des Herbiers</h5>
+                            <p class="card-text">Les trois chorales des Herbiers La Rose d'Or, Amis Voix et Donjon d'Ardelay, se retrouvent pour un concert en l'église Saint-Pierre.</p>
+                            <h6 class="dates">🗓️ 30 octobre</h6>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://www.cheval-daventure.com/photos/600x400/parcours-dobstacles-15434.jpg" class="card-img-top" alt="identité visuelle">
+                        <div class="card-body">
+                            <h5 class="card-title">Equitation : Jumping des Herbiers</h5>
+                            <p class="card-text">Concours de sauts d'obstacles au Parc équestre du bocage</p>
+                            <h6 class="dates">🗓️ 8 novembre 2025</h6>
+                        </div>
+                    </div>                            
+                    <div class="card">
+                        <img src="https://www.ot-lesherbiers.fr/wp-content/uploads/2024/07/Vue-moulins1-@l.langlet_OTLesHerbiers.jpg" class="card-img-top" alt="frairie de la toussaint" >
+                        <div class="card-body">
+                            <h5 class="card-title">Trail des herbiers</h5>
+                            <p class="card-text">Trail de 20km</p>
+                            <h6 class="dates">🗓️ 9 novembre</h6>
+                        </div>
+                    </div>
+                </div>       
+            </div> 
         </div>
 
-        <div id="zone-activites" class="zone">
-            <h2>Nos activités coups de coeur</h2>
-            <p>Une sélection des meilleures </p>
-            <section id="activite"></section>  
+        <div id="zone-activites">
+            <h2>Nos activités coup de coeur</h2>
+            <p>Une sélection des meilleures activités à faire au Pays des Herbiers</p>
+            <section class="filters">
+                <input type="text" id="searchInput" placeholder="Rechercher un produit...">
+                <select id="categoryFilter">
+                    <option value="all">Toutes les catégories</option>
+                    <option value="déco">Déco</option>
+                    <option value="boucles">Boucles d'oreilles</option>
+                    <option value="cheveux">Accessoires cheveux</option>
+                </select>
+            </section>
+            <div id="productContainer" class="product-grid"></div>
         </div>
 
         <div id="zone-logement">

@@ -1,19 +1,3 @@
-export function createMenu() {
-  const navbar = document.getElementById('navbar');
-  navbar.innerHTML = `
-    <nav class="navbar">
-      <ul class="nav-links">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="activites.html">Activités</a></li>
-        <li><a href="agenda.html">Agenda</a></li>
-        <li><a href="logements.html">Logements</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  `;
-  document.body.prepend(header);
-}
-
 const products = [
   {
     id: 1,
@@ -44,6 +28,10 @@ const products = [
 let cart = {};
 
 let productContainer = document.getElementById("productContainer");
+let cartList = document.getElementById("cartList");
+let totalPriceElement = document.getElementById("totalPrice");
+let searchInput = document.getElementById("searchInput");
+let categoryFilter = document.getElementById("categoryFilter");
 
 searchInput.addEventListener("input", renderProducts);
 categoryFilter.addEventListener("change", renderProducts);
@@ -105,6 +93,61 @@ function renderProducts() {
 
     productContainer.appendChild(card);
   });
+}
+
+function renderCart() {
+  cartList.innerHTML = '';
+  let total = 0;
+
+  for (let id in cart) {
+    let product = products.find(p => p.id == id);
+    let quantity = cart[id];
+    let itemTotal = product.price * quantity;
+    total += itemTotal;
+
+    let li = document.createElement("li");
+
+    let nameSpan = document.createElement("span");
+    nameSpan.textContent = product.name;
+
+    let quantityDiv = document.createElement("div");
+    quantityDiv.className = "quantity-control";
+
+    let minusButton = document.createElement("button");
+    minusButton.textContent = "−";
+    minusButton.addEventListener("click", function () {
+      cart[id]--;
+      if (cart[id] <= 0) {
+        delete cart[id];
+      }
+      renderCart();
+    });
+
+    let qtySpan = document.createElement("span");
+    qtySpan.textContent = quantity;
+
+    let plusButton = document.createElement("button");
+    plusButton.textContent = "+";
+    plusButton.addEventListener("click", function () {
+      cart[id]++;
+      renderCart();
+    });
+
+    quantityDiv.appendChild(minusButton);
+    quantityDiv.appendChild(qtySpan);
+    quantityDiv.appendChild(plusButton);
+
+    let priceSpan = document.createElement("span");
+    priceSpan.textContent = itemTotal.toFixed(2) + " €";
+
+    li.appendChild(nameSpan);
+    li.appendChild(quantityDiv);
+    li.appendChild(priceSpan);
+
+    cartList.appendChild(li);
+  }
+
+  totalPriceElement.textContent = total.toFixed(2) + " €";
 }
 
 renderProducts(); 
