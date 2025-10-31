@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export async function getWeatherData() {
-  const url = 'https://api.open-meteo.com/v1/forecast?latitude=46.8902&longitude=-0.9362&daily=temperature_2m_max,temperature_2m_min,weathercode&timezone=Europe%2FParis';
+  const url = 'https://api.open-meteo.com/v1/forecast?latitude=46.871&longitude=-1.016&daily=temperature_2m_max,temperature_2m_min,weathercode&timezone=Europe%2FParis';
 
   try {
     const response = await axios.get(url);

@@ -62,7 +62,7 @@ button {
   background-color: rgba(255, 255, 255, 0.85);
   color: #000;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 10px;
   transition: background-color 0.3s ease;
 }
 
@@ -73,14 +73,14 @@ button:hover {
 .meteo{
   background-color: rgb(255, 255, 255);
   color: #000;
-  border: solid;
+  border: solid 2px;
   border-color: #d8b568;
   font-weight: bold;
 }
 
 .meteo:hover{
-  background-color: #fbf9f4;
-  color: #000;
+  background-color:  #d8b568;
+  color: #ffffff;
 }
 
 /* Navbar */
@@ -134,7 +134,7 @@ main{
 
 /* Section à fond plein */
 #zone-agenda {
-  background-color: #f2f2f2;
+  background-color: #fffbf4;
   width: 100vw;
   position: relative;
   left: 50%;
@@ -230,17 +230,18 @@ h2{
 .card {
   width: 100%;
   max-width: 350px;
-  background-color: #ffffff;
-  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   display: flex;
   flex-direction: column;
+  background: #ffffff;
+  border-radius: 8px;
+  border : 2px;
+  border-color: #000000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .cardActivity{
-  background-color: #f2f2f2;
-  border: 1px solid rgb(222, 222, 222);
+  background-color: #fff9ea;
 }
 
 .card img {
