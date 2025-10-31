@@ -14,7 +14,7 @@ export function renderActivity({ card, activityContainer, searchInput, categoryF
 
   filteredActivity.forEach(activity => {
     const card = document.createElement("div");
-    card.className = "card";
+    card.className = "card cardActivity";
 
     const img = document.createElement("img");
     img.src = activity.image;
